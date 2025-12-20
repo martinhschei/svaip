@@ -68,7 +68,7 @@
                 addEndCard() {
                     const newCard = {
                         type: 'end',
-                        message: 'Thank you for completing this survey!',
+                        message: 'Thank you for completing the svaip!',
                         formFields: [],
                         x: 100 + (this.svaip.cards.length * 50),
                         y: 100 + (this.svaip.cards.length * 30),
@@ -533,7 +533,6 @@
                                 <!-- End Card Body -->
                                 <template x-if="card.type === 'end'">
                                     <div class="p-3">
-                                        <div class="text-xs font-medium text-gray-700 mb-1">Message:</div>
                                         <div class="text-sm text-gray-900 mb-2 line-clamp-3" x-text="card.message || ''"></div>
                                         <div x-show="card.formFields && card.formFields.length > 0" class="text-xs text-emerald-600 mt-2">
                                             <i class="fa-solid fa-list-check mr-1"></i><span x-text="card.formFields.length"></span> form field(s)
